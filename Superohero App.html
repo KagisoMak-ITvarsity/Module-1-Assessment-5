@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero App - Internet & Web Principles Demonstrated</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #FFD700;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .principle-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .principle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .principle-card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .principle-card p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .code-example {
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding: 10px;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            color: #333;
+        }
+        
+        .superhero-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .hero-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-card:hover {
+            box-shadow: 0 8px 16px rgba(255, 215, 0, 0.4);
+            transform: scale(1.05);
+        }
+        
+        .hero-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-body {
+            padding: 20px;
+        }
+        
+        .hero-body h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .hero-body p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+        
+        .button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+        
+        .button:hover {
+            background: #764ba2;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+        
+        .emoji {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦸 Superhero App: Internet & Web Principles</h1>
+            <p>Demonstrating how superheroes work together like the internet!</p>
+            <p style="margin-top: 15px;"><a href="index-superhero.html" style="color: #FFD700; text-decoration: none; font-weight: bold;">← Back to Index</a></p>
+        </header>
+        
+        <!-- INTERNET PRINCIPLES AS SUPERHEROES -->
+        <section>
+            <h2 style="color: white; margin-bottom: 20px;">🌐 Internet Principles in Action</h2>
+            
+            <div class="principles">
+                <!-- CLIENT-SERVER PRINCIPLE -->
+                <div class="principle-card">
+                    <h2><span class="emoji">📱</span> Client-Server Architecture</h2>
+                    <p><strong>Superhero Analogy:</strong> The citizen (client) calls for help, and the superhero (server) responds with assistance.</p>
+                    <p>In your browser, when you request a webpage, you're the client sending a request to a server. The server processes it and sends back the response.</p>
+                    <div class="code-example">
+Client Request: "I need my webpage!"<br>
+Server Response: "Here's your HTML content!"
+                    </div>
+                </div>
+                
+                <!-- IP ADDRESSING & ROUTING -->
+                <div class="principle-card">
+                    <h2><span class="emoji">🗺️</span> IP Addressing & Routing</h2>
+                    <p><strong>Superhero Analogy:</strong> Each superhero has a unique HQ location (IP address). Messages are routed through the city to find the right hero.</p>
+                    <p>Every device on the internet has a unique IP address (like 192.168.1.1). Data packets travel across networks, routed by their IP addresses.</p>
+                    <div class="code-example">
+Your IP: 203.0.113.45<br>
+Server IP: 198.51.100.20<br>
+Route: Your Device → Router → ISP → Server
+                    </div>
+                </div>
+                
+                <!-- TCP/IP PROTOCOL -->
+                <div class="principle-card">
+                    <h2><span class="emoji">🤝</span> TCP/IP Protocol</h2>
+                    <p><strong>Superhero Analogy:</strong> The Superhero Communication Protocol ensures messages arrive complete and in order, no matter the obstacle!</p>
+                    <p>TCP ensures reliable, ordered delivery of data. IP handles addressing. Together they're the backbone of internet communication.</p>
+                    <div class="code-example">
+TCP: Guarantees delivery order<br>
+IP: Routes packets to destination<br>
+Result: Reliable data transmission
+                    </div>
+                </div>
+                
+                <!-- DNS PRINCIPLE -->
+                <div class="principle-card">
+                    <h2><span class="emoji">📖</span> Domain Name System (DNS)</h2>
+                    <p><strong>Superhero Analogy:</strong> A directory that translates "Batman" to his actual location/HQ address.</p>
+                    <p>DNS translates human-readable domain names (superhero.com) into IP addresses that computers understand.</p>
+                    <div class="code-example">
+You type: superhero.com<br>
+DNS translates to: 93.184.216.34<br>
+Browser connects to: 93.184.216.34
+                    </div>
+                </div>
+                
+                <!-- HTTP/HTTPS PRINCIPLE -->
+                <div class="principle-card">
+                    <h2><span class="emoji">🔐</span> HTTP/HTTPS Protocol</h2>
+                    <p><strong>Superhero Analogy:</strong> HTTP is the public radio communication. HTTPS is the encrypted secure channel.</p>
+                    <p>HTTP is stateless - each request is independent. HTTPS adds encryption to protect sensitive data like passwords and personal info.</p>
+                    <div class="code-example">
+HTTP: GET /superhero/batman<br>
+HTTPS: GET /superhero/batman (encrypted)<br>
+Status: 200 OK
+                    </div>
+                </div>
+                
+                <!-- HYPERTEXT & HYPERLINKING -->
+                <div class="principle-card">
+                    <h2><span class="emoji">🔗</span> Hypertext & Hyperlinking</h2>
+                    <p><strong>Superhero Analogy:</strong> Superheroes are connected through a network - Batman can link to Superman, who links to Wonder Woman.</p>
+                    <p>The web is built on hyperlinks that connect documents. Click a link and you navigate to a new URL - it's the "web" that makes it all connected!</p>
+                    <div class="code-example">
+&lt;a href="superman.html"&gt;Visit Superman&lt;/a&gt;<br>
+&lt;a href="wonderwoman.html"&gt;Visit Wonder Woman&lt;/a&gt;
+                    </div>
+                </div>
+                
+                <!-- URL PRINCIPLE -->
+                <div class="principle-card">
+                    <h2><span class="emoji">🎯</span> Universal Resource Locators (URLs)</h2>
+                    <p><strong>Superhero Analogy:</strong> An address that uniquely identifies where each superhero's information is stored.</p>
+                    <p>URLs have components: protocol (https://), domain (example.com), path (/heroes/batman), and query strings (?power=strength).</p>
+                    <div class="code-example">
+https://superheroes.com/hero/batman?power=strength<br>
+Protocol: https<br>
+Domain: superheroes.com<br>
+Path: /hero/batman<br>
+Query: ?power=strength
+                    </div>
+                </div>
+                
+                <!-- WEB STANDARDS -->
+                <div class="principle-card">
+                    <h2><span class="emoji">📋</span> Web Standards & Interoperability</h2>
+                    <p><strong>Superhero Analogy:</strong> All superheroes speak the same language so they can coordinate regardless of their origin.</p>
+                    <p>HTML structures content, CSS styles it, JavaScript adds interactivity. These standards work across all browsers - Chrome, Firefox, Safari, Edge.</p>
+                    <div class="code-example">
+HTML: Structure<br>
+CSS: Style & Layout<br>
+JavaScript: Interactivity<br>
+Result: Works everywhere!
+                    </div>
+                </div>
+                
+                <!-- CLIENT-SIDE VS SERVER-SIDE -->
+                <div class="principle-card">
+                    <h2><span class="emoji">⚙️</span> Client-Side vs Server-Side</h2>
+                    <p><strong>Superhero Analogy:</strong> Client-side = superhero's personal thinking. Server-side = the global superhero database.</p>
+                    <p>Browser executes HTML, CSS, JavaScript locally. Server handles databases, logic, and security. They work together!</p>
+                    <div class="code-example">
+Client: JavaScript runs in your browser<br>
+Server: PHP/Python processes on server<br>
+Communication: HTTP requests/responses
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SUPERHEROES GALLERY - DEMONSTRATING WEB PRINCIPLES -->
+        <section>
+            <h2 style="color: white; margin-bottom: 20px;">🦸 Meet Our Internet Superheroes</h2>
+            
+            <div class="superhero-gallery">
+                <!-- Batman - Client-Server Hero -->
+                <div class="hero-card">
+                    <div class="hero-header">
+                        <h2>🦇 Batman</h2>
+                        <p>The Client-Server Hero</p>
+                    </div>
+                    <div class="hero-body">
+                        <h3>Power: Processing Requests</h3>
+                        <p>Batman requests information from the Batcave (Server) and processes it locally in his mind (Browser). He sends requests and receives responses - classic client-server interaction!</p>
+                        <button class="button">Send Request</button>
+                    </div>
+                </div>
+                
+                <!-- Superman - IP Routing Hero -->
+                <div class="hero-card">
+                    <div class="hero-header">
+                        <h2>🦸 Superman</h2>
+                        <p>The IP Routing Hero</p>
+                    </div>
+                    <div class="hero-body">
+                        <h3>Power: Flying Through Networks</h3>
+                        <p>Superman flies across the globe using his unique "IP address" (12.34.56.78). He routes around obstacles, always reaching his destination through the fastest path!</p>
+                        <button class="button">Check IP</button>
+                    </div>
+                </div>
+                
+                <!-- Wonder Woman - DNS Hero -->
+                <div class="hero-card">
+                    <div class="hero-header">
+                        <h2>💫 Wonder Woman</h2>
+                        <p>The DNS Hero</p>
+                    </div>
+                    <div class="hero-body">
+                        <h3>Power: Name Translation</h3>
+                        <p>Wonder Woman translates superhero names into their secret locations. Just like DNS translates "batman.hero" to "192.168.1.100" - she knows where everyone really is!</p>
+                        <button class="button">Resolve Name</button>
+                    </div>
+                </div>
+                
+                <!-- Flash - HTTP Speed Hero -->
+                <div class="hero-card">
+                    <div class="hero-header">
+                        <h2>⚡ The Flash</h2>
+                        <p>The HTTP Speed Hero</p>
+                    </div>
+                    <div class="hero-body">
+                        <h3>Power: Stateless Communication</h3>
+                        <p>The Flash processes each request independently at lightning speed. He doesn't remember the last request - just like HTTP! Each request is brand new and complete.</p>
+                        <button class="button">Execute Request</button>
+                    </div>
+                </div>
+                
+                <!-- Aquaman - TCP Reliability Hero -->
+                <div class="hero-card">
+                    <div class="hero-header">
+                        <h2>🌊 Aquaman</h2>
+                        <p>The TCP Reliability Hero</p>
+                    </div>
+                    <div class="hero-body">
+                        <h3>Power: Guaranteed Delivery</h3>
+                        <p>Aquaman ensures all underwater messages arrive in perfect order, no matter the currents! Like TCP, he retransmits if packets are lost, guaranteeing reliable delivery.</p>
+                        <button class="button">Verify Delivery</button>
+                    </div>
+                </div>
+                
+                <!-- Spider-Man - Hyperlink Hero -->
+                <div class="hero-card">
+                    <div class="hero-header">
+                        <h2>🕷️ Spider-Man</h2>
+                        <p>The Hyperlink Hero</p>
+                    </div>
+                    <div class="hero-body">
+                        <h3>Power: Web Creation</h3>
+                        <p>Spider-Man weaves connections between heroes and locations! He's the master of hyperlinks - every web he creates links superheroes together into one interconnected network.</p>
+                        <button class="button">View Web</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- INTERACTIVE DEMONSTRATION -->
+        <section style="background: white; padding: 30px; border-radius: 8px; margin: 30px 0;">
+            <h2 style="color: #667eea; margin-bottom: 20px;">🔬 Interactive Web Principles Test</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="color: #333; font-weight: bold;">
+                    Which hero represents HTTP's stateless communication?
+                </label>
+                <select id="quiz" style="margin-top: 10px; padding: 10px; width: 100%; border: 2px solid #667eea; border-radius: 5px;">
+                    <option value="">-- Select an answer --</option>
+                    <option value="wrong1">Batman (Client-Server)</option>
+                    <option value="correct">The Flash (Stateless Processing)</option>
+                    <option value="wrong2">Superman (IP Routing)</option>
+                    <option value="wrong3">Aquaman (TCP Reliability)</option>
+                </select>
+                <button class="button" style="margin-top: 10px; width: 100%;">Check Answer</button>
+            </div>
+
+            <div id="feedback" style="margin-top: 15px;"></div>
+        </section>
+        
+        <footer>
+            <h3>🌐 Understanding the Internet Through Superheroes</h3>
+            <p>This app demonstrates how internet and web principles work together, just like superheroes coordinating to save the world!</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Created to show: Client-Server, IP Routing, TCP/IP, DNS, HTTP/HTTPS, Hypertext, URLs, Web Standards, and Client/Server Processing</p>
+        </footer>
+    </div>
+    
+
+</body>
+</html>
